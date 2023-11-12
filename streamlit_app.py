@@ -67,17 +67,17 @@ def about_us():
 
     # Team member 1
     st.subheader("John Doe")
-    st.image("https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg", caption="John Doe - Project Lead", use_column_width=True)
+    st.image("https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg", caption="Project Lead", use_column_width=True)
     st.text("John is passionate about AI and environmental sustainability. As the project lead, he oversees the development and implementation of Waste Watch.")
 
     # Team member 2
     st.subheader("Jane Smith")
-    st.image("https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg", caption="Jane Smith - Machine Learning Engineer", use_column_width=True)
+    st.image("https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg", caption="Machine Learning Engineer", use_column_width=True)
     st.text("Jane specializes in machine learning and is responsible for training and fine-tuning the AI model for waste classification.")
 
     # Team member 3
     st.subheader("Bob Johnson")
-    st.image("https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg", caption="Bob Johnson - UX/UI Designer", use_column_width=True)
+    st.image("https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg", caption="UX/UI Designer", use_column_width=True)
     st.text("Bob contributes to the project with his expertise in creating an intuitive and user-friendly interface for the Waste Watch application.")
 
     # Add more team members as needed
@@ -85,6 +85,17 @@ def about_us():
     # Contact information
     st.subheader("Contact Us")
     st.text("For inquiries or collaboration opportunities, please reach out to us at info@wastewatch.com.")
+
+# Display the selected page
+if page == "Overview":
+    overview_page()
+elif page == "Interactive Demo":
+    interactive_demo()
+elif page == "Waste Management":
+    waste_management()
+elif page == "About Us":
+    about_us()
+
 
 # Display the selected page
 if page == "Overview":
