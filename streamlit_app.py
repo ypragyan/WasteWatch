@@ -1,12 +1,12 @@
 import streamlit as st
 
 # Set page configuration
+# Set page configuration
 st.set_page_config(
     page_title="Waste Watch - AI for Waste Classification",
     page_icon="🗑️",
     layout="wide"
 )
-
 
 # Define custom CSS for the pastel blue background
 custom_css = """
@@ -20,10 +20,20 @@ body {
 # Use st.markdown to apply the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 
-# Your Streamlit app content goes here
-st.title("Pastel Blue Background")
+# Front page layout
+st.title("Welcome to Waste Watch!")
+st.write("Empowering Waste Management with AI")
 
-# Add more content here
+# Display an engaging image or illustration
+st.image("waste_watch_image.jpg", use_column_width=True, caption="Image Source: Your Source")
+
+# Add a call-to-action button
+if st.button("Get Started"):
+    st.sidebar.selectbox(
+        "Select a page",
+        ("Overview", "Interactive Demo", "Waste Management", "About Us")
+    )
+    st.success("Let's explore Waste Watch together!")
 
 
 def overview_page():
