@@ -25,7 +25,7 @@ st.title("Welcome to Waste Watch!")
 st.write("Empowering Waste Management with AI")
 
 # Display an engaging image or illustration
-st.image("waste_watch_image.jpg", use_column_width=True, caption="Image Source: Your Source")
+st.image("https://impactually.se/wp-content/uploads/2019/12/59907sm.jpg", use_column_width=True, caption="Image Source: Your Source")
 
 # Add a call-to-action button
 if st.button("Get Started"):
@@ -34,24 +34,6 @@ if st.button("Get Started"):
         ("Overview", "Interactive Demo", "Waste Management", "About Us")
     )
     st.success("Let's explore Waste Watch together!")
-
-
-def overview_page():
-    st.title("Project Overview")
-    st.write("This is the overview page for your project.")
-    # Add your project overview content here
-
-# Create a function for another page
-def other_page():
-    st.title("Another Page")
-    st.write("This is another page of your Streamlit app.")
-    # Add content for this page here
-
-# Create a navigation menu
-page = st.sidebar.selectbox(
-    "Select a page",
-    ("Overview", "Interactive Demo", "Waste Management", "About Us")
-)
 
 # Define the function for the "Overview" page with custom styling
 def overview_page():
