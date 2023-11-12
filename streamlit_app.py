@@ -67,17 +67,17 @@ def about_us():
 
     # Team member 1
     st.subheader("John Doe")
-    st.image("john_doe_photo.jpg", caption="John Doe - Project Lead", use_column_width=True)
+    st.image("https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg", caption="John Doe - Project Lead", use_column_width=True)
     st.text("John is passionate about AI and environmental sustainability. As the project lead, he oversees the development and implementation of Waste Watch.")
 
     # Team member 2
     st.subheader("Jane Smith")
-    st.image("jane_smith_photo.jpg", caption="Jane Smith - Machine Learning Engineer", use_column_width=True)
+    st.image("https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg", caption="Jane Smith - Machine Learning Engineer", use_column_width=True)
     st.text("Jane specializes in machine learning and is responsible for training and fine-tuning the AI model for waste classification.")
 
     # Team member 3
     st.subheader("Bob Johnson")
-    st.image("bob_johnson_photo.jpg", caption="Bob Johnson - UX/UI Designer", use_column_width=True)
+    st.image("https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg", caption="Bob Johnson - UX/UI Designer", use_column_width=True)
     st.text("Bob contributes to the project with his expertise in creating an intuitive and user-friendly interface for the Waste Watch application.")
 
     # Add more team members as needed
