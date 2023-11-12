@@ -87,27 +87,3 @@ elif page == "Waste Management":
     waste_management()
 elif page == "About Us":
     about_us()
-
-
-# Display the selected page
-if page == "Overview":
-    overview_page()
-elif page == "Interactive Demo":
-    interactive_demo()
-elif page == "Waste Management":
-    waste_management()
-elif page == "About Us":
-    about_us()
-
-
-
-
-# Display the selected page
-if page == "Overview":
-    overview_page()
-elif page == "Interactive Demo":
-    interactive_demo()
-elif page == "Waste Management":
-    waste_management()
-elif page == "About Us":
-    about_us()
