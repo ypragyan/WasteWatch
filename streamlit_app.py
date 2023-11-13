@@ -1,48 +1,5 @@
 import streamlit as st
 
-# Set page configuration
-st.set_page_config(
-    page_title="Waste Watch - AI for Waste Classification",
-    page_icon="🗑️",
-    layout="wide"
-)
-
-# Define custom CSS for the pastel blue background
-custom_css = """
-<style>
-body {
-    background-color: #b2d8d8; /* Pastel Blue */
-}
-</style>
-"""
-
-# Use st.markdown to apply the custom CSS
-st.markdown(custom_css, unsafe_allow_html=True)
-
-# Front page layout
-st.title("Welcome to Waste Watch!")
-st.write("Empowering Waste Management with AI")
-
-# Display an engaging image or illustration
-st.image("https://impactually.se/wp-content/uploads/2019/12/59907sm.jpg", use_column_width=True, caption="Image Source: Your Source")
-
-# Add a call-to-action button
-if st.button("Get Started"):
-    page = st.sidebar.selectbox(
-        "Select a page",
-        ("Overview", "Interactive Demo", "Waste Management", "About Us")
-    )
-
-    # Display the selected page
-    if page == "Overview":
-        overview_page()
-    elif page == "Interactive Demo":
-        interactive_demo()
-    elif page == "Waste Management":
-        waste_management()
-    elif page == "About Us":
-        about_us()
-
 # Define the function for the "Overview" page with custom styling
 def overview_page():
     st.header("Project Overview")
@@ -85,3 +42,46 @@ def about_us():
     # Contact information
     st.subheader("Contact Us")
     st.text("For inquiries or collaboration opportunities, please reach out to us at info@wastewatch.com.")
+
+# Set page configuration
+st.set_page_config(
+    page_title="Waste Watch - AI for Waste Classification",
+    page_icon="🗑️",
+    layout="wide"
+)
+
+# Define custom CSS for the pastel blue background
+custom_css = """
+<style>
+body {
+    background-color: #b2d8d8; /* Pastel Blue */
+}
+</style>
+"""
+
+# Use st.markdown to apply the custom CSS
+st.markdown(custom_css, unsafe_allow_html=True)
+
+# Front page layout
+st.title("Welcome to Waste Watch!")
+st.write("Empowering Waste Management with AI")
+
+# Display an engaging image or illustration
+st.image("https://impactually.se/wp-content/uploads/2019/12/59907sm.jpg", use_column_width=True, caption="Image Source: Your Source")
+
+# Add a call-to-action button
+if st.button("Get Started"):
+    page = st.sidebar.selectbox(
+        "Select a page",
+        ("Overview", "Interactive Demo", "Waste Management", "About Us")
+    )
+
+    # Display the selected page
+    if page == "Overview":
+        overview_page()
+    elif page == "Interactive Demo":
+        interactive_demo()
+    elif page == "Waste Management":
+        waste_management()
+    elif page == "About Us":
+        about_us()
