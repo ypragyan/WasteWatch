@@ -35,7 +35,7 @@ def about_us():
     # Team member 3
     st.subheader("Bob Johnson")
     st.image("https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg", caption="UX/UI Designer", use_column_width=True)
-    st.text("Bob contributes to the project with his expertise in creating an intuitive and user-friendly interface for the Waste Watch application.")
+    # st.text("Bob contributes to the project with his expertise in creating an intuitive and user-friendly interface for the Waste Watch application.")
 
     # Add more team members as needed
 
