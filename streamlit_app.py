@@ -70,11 +70,11 @@ st.write("Empowering Waste Management with AI")
 # st.image("https://impactually.se/wp-content/uploads/2019/12/59907sm.jpg", use_column_width=True, caption="Image Source: Your Source")
 
 # Add a call-to-action button
-if st.button("Get Started"):
-    page = st.sidebar.selectbox(
-        "Select a page",
-        ("Overview", "Interactive Demo", "Waste Management", "About Us")
-    )
+ 
+page = st.sidebar.selectbox(
+    "Select a page",
+    ("Overview", "Interactive Demo", "Waste Management", "About Us")
+)
 
     # Display the selected page
     if page == "Overview":
