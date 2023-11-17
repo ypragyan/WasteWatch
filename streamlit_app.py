@@ -11,6 +11,28 @@ def interactive_demo():
     st.header("Interactive Demo")
     st.write("Try out our interactive demo to see how the AI model can classify waste materials. Upload an image, and the AI will provide you with the classification results.")
     # Add the interactive demo code here
+    upload= st.file_uploader('Insert image for classification', type=['png','jpg'])
+    c1, c2= st.columns(2)
+    if upload is not None:
+      im= Image.open(upload)
+      img= np.asarray(im)
+      image= cv2.resize(img,(128, 128))
+      img= preprocess_input(image)
+      img= np.expand_dims(img, 0)
+      c1.header('Input Image')
+      c1.image(im)
+      c1.write(img.shape)
+      #load weights of the trained model.
+
+    input_shape = (128, 128, 3)
+    optim_1 = Adam(learning_rate=0.0001)
+    model = tf.keras.models.load_model("model/")
+  # prediction on model
+    vgg_preds = model.predict(img)
+    vgg_pred_classes = np.argmax(vgg_preds, axis=1)
+    c2.header('Output')
+    c2.subheader('Predicted class :')
+    c2.write(classes[vgg_pred_classes[0]] )
 
 # Define the function for the "Waste Management" page with custom styling
 def waste_management():
