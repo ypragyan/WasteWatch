@@ -24,7 +24,7 @@ def interactive_demo():
 
     input_shape = (128, 128, 3)
     optim_1 = Adam(learning_rate=0.0001)
-    model = tf.keras.models.load_model("model/")
+    model = tf.keras.models.load_model("https://github.com/ypragyan/WasteWatch/tree/main/model/")
   # prediction on model
     vgg_preds = model.predict(img)
     vgg_pred_classes = np.argmax(vgg_preds, axis=1)
