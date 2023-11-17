@@ -8,8 +8,6 @@ def overview_page():
 
 # Define the function for the "Interactive Demo" page with custom styling
 def interactive_demo():
-    st.header("Interactive Demo")
-    st.write("Try out our interactive demo to see how the AI model can classify waste materials. Upload an image, and the AI will provide you with the classification results.")
     # Add the interactive demo code here
     upload= st.file_uploader('Insert image for classification', type=['png','jpg'])
     c1, c2= st.columns(2)
@@ -33,6 +31,8 @@ def interactive_demo():
     c2.header('Output')
     c2.subheader('Predicted class :')
     c2.write(classes[vgg_pred_classes[0]] )
+    st.header("Interactive Demo")
+    st.write("Try out our interactive demo to see how the AI model can classify waste materials. Upload an image, and the AI will provide you with the classification results.")
 
 # Define the function for the "Waste Management" page with custom styling
 def waste_management():
