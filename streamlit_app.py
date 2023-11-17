@@ -37,7 +37,7 @@ st.markdown(custom_css, unsafe_allow_html=True)
 st.title("Welcome to Waste Watch!")
 st.write("Empowering Waste Management with AI")
 # Display an engaging image or illustration
-st.image("Images/wastewatch.jpg",   width=200, caption="Image Source: Nidhi")
+st.image("Images/wastewatch.jpg", width= 100, caption="Image Source: Nidhi")
 # Add a call-to-action button
  
 page = st.sidebar.selectbox(
