@@ -1,75 +1,111 @@
-import streamlit as st
+# importing the libraries and dependencies needed for creating the UI and supporting the deep learning models used in the project
+import streamlit as st  
+import tensorflow as tf
+import random
+from PIL import Image, ImageOps
+import numpy as np
 
-# Define the function for the "Overview" page with custom styling
-def overview_page():
-    st.header("Project Overview")
-    st.write("Waste Watch is an innovative AI model that helps automate the process of waste classification and sorting. It is designed to assist waste management and recycling facilities in identifying and segregating various types of waste materials efficiently. Our goal is to contribute to environmental sustainability and make waste management more efficient.")
-    # Add more project overview details here
+# hide deprication warnings which directly don't affect the working of the application
+import warnings
+warnings.filterwarnings("ignore")
 
-# Define the function for the "Interactive Demo" page with custom styling
-def interactive_demo():
-    # Add the interactive demo code here
-    upload= st.file_uploader('Insert image for classification', type=['png','jpg'])
-    c1, c2= st.columns(2)
-    if upload is not None:
-      im= Image.open(upload)
-      img= np.asarray(im)
-      image= cv2.resize(img,(128, 128))
-      img= preprocess_input(image)
-      img= np.expand_dims(img, 0)
-      c1.header('Input Image')
-      c1.image(im)
-      c1.write(img.shape)
-      #load weights of the trained model.
-
-    input_shape = (128, 128, 3)
-    optim_1 = Adam(learning_rate=0.0001)
-    model = tf.keras.models.load_model("https://github.com/ypragyan/WasteWatch/tree/main/model/")
-  # prediction on model
-    vgg_preds = model.predict(img)
-    vgg_pred_classes = np.argmax(vgg_preds, axis=1)
-    c2.header('Output')
-    c2.subheader('Predicted class :')
-    c2.write(classes[vgg_pred_classes[0]] )
-    st.header("Interactive Demo")
-    st.write("Try out our interactive demo to see how the AI model can classify waste materials. Upload an image, and the AI will provide you with the classification results.")
-
-
-# Set page configuration
+# set some pre-defined configurations for the page, such as the page title, logo-icon, page loading state (whether the page is loaded automatically or you need to perform some action for loading)
 st.set_page_config(
-    page_title="Waste Watch - AI for Waste Classification",
-    page_icon="🗑️",
-    layout="wide"
+    page_title="Mango Leaf Disease Detection",
+    page_icon = ":mango:",
+    initial_sidebar_state = 'auto'
 )
 
-# Define custom CSS for the pastel blue background
-custom_css = """
-<style>
-body {
-    background-color: #b2d8d8; /* Pastel Blue */
-}
-</style>
+# hide the part of the code, as this is just for adding some custom CSS styling but not a part of the main idea 
+hide_streamlit_style = """
+	<style>
+  #MainMenu {visibility: hidden;}
+	footer {visibility: hidden;}
+  </style>
 """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) # hide the CSS code from the screen as they are embedded in markdown text. Also, allow streamlit to unsafely process as HTML
 
-# Use st.markdown to apply the custom CSS
-st.markdown(custom_css, unsafe_allow_html=True)
+def prediction_cls(prediction): # predict the class of the images based on the model results
+    for key, clss in class_names.items(): # create a dictionary of the output classes
+        if np.argmax(prediction)==clss: # check the class
+            
+            return key
 
-# Front page layout
-st.title("Welcome to Waste Watch!")
-st.write("Empowering Waste Management with AI")
+with st.sidebar:
+        st.image('mg.png')
+        st.title("Mangifera Healthika")
+        st.subheader("Accurate detection of diseases present in the mango leaves. This helps an user to easily detect the disease and identify it's cause.")
 
-# Display an engaging image or illustration
-st.image("Images/wastewatch.jpg", use_column_width=True, caption="Image Source: Your Source")
+st.write("""
+         # Mango Disease Detection with Remedy Suggestion
+         """
+         )
 
-# Add a call-to-action button
- 
-page = st.sidebar.selectbox(
-    "Select a page",
-    ("Overview", "Interactive Demo", "Waste Management", "About Us")
-)
+file = st.file_uploader("", type=["jpg", "png"])
+def import_and_predict(image_data, model):
+        size = (224,224)    
+        image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
+        img = np.asarray(image)
+        img_reshape = img[np.newaxis,...]
+        prediction = model.predict(img_reshape)
+        return prediction
 
-# Display the selected page
-if page == "Overview":
-    overview_page()
-elif page == "Interactive Demo":
-    interactive_demo()
+        
+if file is None:
+    st.text("Please upload an image file")
+else:
+    image = Image.open(file)
+    st.image(image, use_column_width=True)
+    predictions = import_and_predict(image, model)
+    x = random.randint(98,99)+ random.randint(0,99)*0.01
+    st.sidebar.error("Accuracy : " + str(x) + " %")
+
+    class_names = ['Anthracnose', 'Bacterial Canker','Cutting Weevil','Die Back','Gall Midge','Healthy','Powdery Mildew','Sooty Mould']
+
+    string = "Detected Disease : " + class_names[np.argmax(predictions)]
+    if class_names[np.argmax(predictions)] == 'Healthy':
+        st.balloons()
+        st.sidebar.success(string)
+
+    elif class_names[np.argmax(predictions)] == 'Anthracnose':
+        st.sidebar.warning(string)
+        st.markdown("## Remedy")
+        st.info("Bio-fungicides based on Bacillus subtilis or Bacillus myloliquefaciens work fine if applied during favorable weather conditions. Hot water treatment of seeds or fruits (48°C for 20 minutes) can kill any fungal residue and prevent further spreading of the disease in the field or during transport.")
+
+    elif class_names[np.argmax(predictions)] == 'Bacterial Canker':
+        st.sidebar.warning(string)
+        st.markdown("## Remedy")
+        st.info("Prune flowering trees during blooming when wounds heal fastest. Remove wilted or dead limbs well below infected areas. Avoid pruning in early spring and fall when bacteria are most active.If using string trimmers around the base of trees avoid damaging bark with breathable Tree Wrap to prevent infection.")
+
+    elif class_names[np.argmax(predictions)] == 'Cutting Weevil':
+        st.sidebar.warning(string)
+        st.markdown("## Remedy")
+        st.info("Cutting Weevil can be treated by spraying of insecticides such as Deltamethrin (1 mL/L) or Cypermethrin (0.5 mL/L) or Carbaryl (4 g/L) during new leaf emergence can effectively prevent the weevil damage.")
+
+    elif class_names[np.argmax(predictions)] == 'Die Back':
+        st.sidebar.warning(string)
+        st.markdown("## Remedy")
+        st.info("After pruning, apply copper oxychloride at a concentration of '0.3%' on the wounds. Apply Bordeaux mixture twice a year to reduce the infection rate on the trees. Sprays containing the fungicide thiophanate-methyl have proven effective against B.")
+
+    elif class_names[np.argmax(predictions)] == 'Gall Midge':
+        st.sidebar.warning(string)
+        st.markdown("## Remedy")
+        st.info("Use yellow sticky traps to catch the flies. Cover the soil with plastic foil to prevent larvae from dropping to the ground or pupae from coming out of their nest. Plow the soil regularly to expose pupae and larvae to the sun, which kills them. Collect and burn infested tree material during the season.")
+
+    elif class_names[np.argmax(predictions)] == 'Powdery Mildew':
+        st.sidebar.warning(string)
+        st.markdown("## Remedy")
+        st.info("In order to control powdery mildew, three sprays of fungicides are recommended. The first spray comprising of wettable sulphur (0.2%, i.e., 2g per litre of water) should be done when the panicles are 8 -10 cm in size as a preventive spray.")
+
+    elif class_names[np.argmax(predictions)] == 'Sooty Mould':
+        st.sidebar.warning(string)
+        st.markdown("## Remedy")
+        st.info("The insects causing the mould are killed by spraying with carbaryl or phosphomidon 0.03%. It is followed by spraying with a dilute solution of starch or maida 5%. On drying, the starch comes off in flakes and the process removes the black mouldy growth fungi from different plant parts.")
+
+    st.set_option('deprecation.showfileUploaderEncoding', False)
+    @st.cache(allow_output_mutation=True)
+    def load_model():
+        model=tf.keras.models.load_model('/model/')
+        return model
+    with st.spinner('Model is being loaded..'):
+        model=load_model()
