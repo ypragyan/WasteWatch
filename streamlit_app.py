@@ -40,7 +40,7 @@ st.markdown(custom_css, unsafe_allow_html=True)
 st.title("Welcome to Waste Watch!")
 st.write("Empowering Waste Management with AI")
 # Display an engaging image or illustration
-st.image("https://impactually.se/wp-content/uploads/2019/12/59907sm.jpg", use_column_width=True, caption="Image Source: Your Source")
+st.image("Images/wastewatch.jpg", use_column_width=True, caption="Image Source: Your Source")
 # Add a call-to-action button
  
 page = st.sidebar.selectbox(
