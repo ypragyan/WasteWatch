@@ -1,7 +1,7 @@
 [theme] # You have to add this line
 
-primaryColor = '#00FF00' # Green
+primaryColor = '#4CAF50' # Green
 
-backgroundColor = '#00325B' # Dark Blue
+backgroundColor = '#2196F3' # Blue
 
-secondaryBackgroundColor = '#55B2FF' # Lighter Blue
+secondaryBackgroundColor = '#64B5F6' # Lighter Blue
