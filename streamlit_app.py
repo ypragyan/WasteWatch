@@ -46,7 +46,7 @@ st.image("Images/wastewatch.jpg",   width=300, caption="Image Source: Your Sourc
  
 page = st.sidebar.selectbox(
     "Select a page",
-    ("Overview", "Interactive Demo", "Waste Management", "About Us")
+    ("Overview", "Interactive Demo")
 )
 # Display the selected page
 if page == "Overview":
