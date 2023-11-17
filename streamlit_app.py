@@ -26,25 +26,18 @@ def interactive_demo():
  
 # Set page configuration
 st.set_page_config(
-    page_title="Waste Watch - AI for Waste Classification",
+    page_title="WasteWatch",
     page_icon="🗑️",
     layout="wide"
 )
-# Define custom CSS for the pastel blue background
-custom_css = """
-<style>
-body {
-    background-color: #b2d8d8; /* Pastel Blue */
-}
-</style>
-"""
+ 
 # Use st.markdown to apply the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 # Front page layout
 st.title("Welcome to Waste Watch!")
 st.write("Empowering Waste Management with AI")
 # Display an engaging image or illustration
-st.image("Images/wastewatch.jpg",   width=300, caption="Image Source: Your Source")
+st.image("Images/wastewatch.jpg",   width=200, caption="Image Source: Nidhi")
 # Add a call-to-action button
  
 page = st.sidebar.selectbox(
