@@ -1,3 +1,4 @@
+import streamlit as st
 def overview_page():
     st.header("Project Overview")
     st.write("Waste Watch is an innovative AI model that helps automate the process of waste classification and sorting. It is designed to assist waste management and recycling facilities in identifying and segregating various types of waste materials efficiently. Our goal is to contribute to environmental sustainability and make waste management more efficient.")
