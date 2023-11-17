@@ -1,6 +1,5 @@
 # importing the libraries and dependencies needed for creating the UI and supporting the deep learning models used in the project
 import streamlit as st  
-!pip install tensorflow
 import tensorflow as tf
 import random
 from PIL import Image, ImageOps
