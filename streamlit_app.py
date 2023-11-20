@@ -17,13 +17,14 @@ def ai_page():
     st.title("WasteWatch AI")
     
     st.subheader("Data")
-    heatmap_images = [
+    data_imgs = [
         Image.open("Images/class.png"),
         Image.open("Images/data.png"),
         Image.open("Images/images.png")
     ]
     st.write("While the class distribution appears relatively balanced overall, there is a noticeable disproportion in the amount of data allocated to paper and e-waste. This distribution closely mirrors real-world scenarios, where certain waste categories, such as paper, tend to be more prevalent, while others, like e-waste, are relatively less abundant.")
-    st.image(heatmap_images, caption=["Class Distribution Comparison ", "Sample Images of the dataset", "Pixel Value Distribution"], use_column_width=True)
+    st.write("The dataset was obtained from Jay Soni, and it was categorized into six classes: e-waste, batteries, glass, metal, organic, and paper, representing the most common types of waste. In total, the dataset comprises 4,580 training samples and 1,128 testing samples. The images in the dataset exhibit a mean pixel value of 0.59, accompanied by a standard deviation of 0.292. These statistical measures provide insights into the overall brightness and variability of the images within the dataset.")
+    st.image(data_imgs, caption=["Class Distribution Comparison ", "Sample Images of the dataset", "Pixel Value Distribution"], use_column_width=True)
     # AI Model Architecture Image
     st.subheader("Model Architecture")
     model_architecture_image = Image.open("Images/Model.png")
