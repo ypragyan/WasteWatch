@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-# import matplotlib.pyplot as plt
-import seaborn as sns
 
 # Set page title and favicon
 st.set_page_config(page_title="Project Showcase", page_icon="🚀")
@@ -15,16 +13,6 @@ def load_data():
         'Value': np.random.randn(100).cumsum()
     })
     return data
-
-# Function to create a line chart
-def plot_line_chart(data):
-    st.subheader("Project Overview")
-    fig, ax = plt.subplots(figsize=(10, 6))
-    sns.lineplot(x='Date', y='Value', data=data, ax=ax, label='Project Data', color='blue')
-    plt.title('Project Performance Over Time')
-    plt.xlabel('Date')
-    plt.ylabel('Value')
-    st.pyplot(fig)
 
 # Function to create a data table
 def display_data_table(data):
@@ -56,7 +44,6 @@ def main():
     project_sidebar()
 
     # Display project components
-    plot_line_chart(data)
     display_data_table(data)
 
 if __name__ == "__main__":
