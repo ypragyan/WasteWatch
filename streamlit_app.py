@@ -20,15 +20,11 @@ def load_data():
 def project_sidebar():
     st.sidebar.title("WasteWatch: AI Waste Sorting")
     st.sidebar.info(
-        "WasteWatch is an AI-powered waste sorting project. It uses computer vision to classify waste types."
+        "WasteWatch is an AI-powered waste sorting project"
     )
     st.sidebar.subheader("Project Links")
-    st.sidebar.markdown("[GitHub Repository](https://github.com/yourusername/wastewatch)")
-    st.sidebar.markdown("[Documentation](https://wastewatchdocs.com)")
-    st.sidebar.subheader("Contact Information")
-    st.sidebar.text("For inquiries, please contact:")
-    st.sidebar.text("Your Name")
-    st.sidebar.text("youremail@example.com")
+    st.sidebar.markdown("[GitHub Repository](https://github.com/ypragyan/WasteWatch/tree/main)")
+    st.sidebar.markdown("[Documentation](https://docs.google.com/presentation/d/1UNmV66jZEMEsP_Dm142TjZXEKSmYRRb8nxpoEgWEMis/edit#slide=id.g29cec67359b_0_0)")
 
 # Function to create the Problem page
 def problem_page():
