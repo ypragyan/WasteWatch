@@ -21,7 +21,7 @@ def project_sidebar():
 # Function to create the Problem page
 def problem_page():
     st.title("Waste Sorting Problem")
-    st.text("While the waste sorting industry is an essential part of our environment, we fail to pay adequate attention to the problems it causes in the lives of people that are directly involved in the process such as laborers who manually sort waste. Their lives are often spent in poverty and bio-hazardous conditions because of their occupation.")
+    st.write("While the waste sorting industry is an essential part of our environment, we fail to pay adequate attention to the problems it causes in the lives of people that are directly involved in the process such as laborers who manually sort waste. Their lives are often spent in poverty and bio-hazardous conditions because of their occupation.")
     st.text("Manual waste pickers in the industry are no longer equipped to handle the 2 trillion tonnes of waste produced each year globally. "
             "Waste pickers live on the street or on dump sites. In addition, waste pickers are mobile and their work often varies seasonally.")
     
