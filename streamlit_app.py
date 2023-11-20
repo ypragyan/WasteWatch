@@ -41,13 +41,13 @@ def ai_page():
     st.image(data_example_images, caption=["Training and Validation Accuracy Over Epochs: The model achieves a peak accuracy of 78&.", "Training and Validation Loss Over Epochs", "Evaluation Metrics Used", "Model Performance"], use_column_width=True)
 
     # Heatmaps
-    st.subheader("Attribution Methods: Visualizing AI gained Knowledge")
+    st.subheader("Attribution Visualisation")
     heatmap_images = [
         Image.open("Images/Heatmap.png"),
         Image.open("Images/Layers.png"),
         Image.open("Images/XAI.png"),
     ]
-    st.image(heatmap_images, caption=["Heatmap 1", "Heatmap 2", "Heatmap 3"], use_column_width=True)
+    st.image(heatmap_images, caption=["GradCAM Heatmap next to original image", "GradCAM heatmap visualising the processing of an input image through the layers of the CNN model", "Different Types of Visualising Techniques"], use_column_width=True)
 
 # Main function
 def main():
