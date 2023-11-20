@@ -1,6 +1,6 @@
-# Waste Watch Website Readme
+# WasteWatch
 
-Welcome to the Waste Watch website, a platform created for the NYAS Challenge to showcase an AI model designed for advanced waste sorting and recycling. This `README.md` file provides an overview of the website and its features.
+Welcome to the github repository of team WasteWatch, a project created for the NYAS Challenge to showcase an AI model designed for advanced waste sorting and recycling. This `README.md` file provides an overview of the website and its features.
 
  
 ## Table of Contents
