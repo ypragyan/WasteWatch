@@ -20,7 +20,7 @@ def ai_page():
     st.subheader("Model Architecture")
     model_architecture_image = Image.open("Images/Model.png")
     st.image(model_architecture_image, caption="WasteWatch Model Architecture", use_column_width=True)
-
+    st.write(" The model used in this project is designed in a sequential architecture for the task of image classification. It consists of several types of layers. Initially, Conv2D layers with 128 filters process the input image, followed by batch normalization for model stability. Max-pooling reduces spatial dimensions, and dropout helps prevent overfitting. The architecture repeats with 128 filters. The GlobalAveragePooling2D layer averages spatial dimensions, and Dense layers shape the final output. In this model, there are 6 output units, for classifying the input image into 6 types of waste.")
     # Data Examples
     st.subheader("Results")
     data_example_images = [
@@ -47,7 +47,7 @@ def main():
 
     # Create navigation
     pages = {"AI": ai_page}
-    selection = st.sidebar.radio("Select Page", list(pages.keys()))
+    selection = st.sidebar.radio("Page", list(pages.keys()))
 
     # Display the selected page
     pages[selection]()
