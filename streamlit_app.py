@@ -5,16 +5,7 @@ from PIL import Image
 
 # Set page title and favicon
 st.set_page_config(page_title="WasteWatch: AI Waste Sorting", page_icon="♻️")
-
-# Function to load data
-def load_data():
-    # Replace this with your own data loading logic
-    data = pd.DataFrame({
-        'Date': pd.date_range(start='2023-01-01', periods=100, freq='D'),
-        'Waste Type': np.random.choice(['Plastic', 'Paper', 'Glass'], 100),
-        'Confidence': np.random.rand(100)
-    })
-    return data
+ 
 
 # Function to create a sidebar with project information
 def project_sidebar():
@@ -67,9 +58,7 @@ def ai_page():
 
 # Main function
 def main():
-    # Load data
-    load_data()
-
+    # Load data 
     # Create layout
     project_sidebar()
 
