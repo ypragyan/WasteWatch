@@ -25,10 +25,9 @@ def ai_page():
     st.subheader("Results")
     data_example_images = [
         Image.open("Images/Accuracy.png"),
-        Image.open("Images/Loss.png"),
-        Image.open("Images/wastewatch.jpg"),
+        Image.open("Images/Loss.png")
     ]
-    st.image(data_example_images, caption=["Example 1", "Example 2", "Example 3"], use_column_width=True)
+    st.image(data_example_images, caption=["Training and Validation Accuracy Over Epochs: The model achieves a peak accuracy of 78&. ", "Training and Validation Loss Over Epochs ], use_column_width=True)
 
     # Heatmaps
     st.subheader("Attribution Methods: Visualizing AI gained Knowledge")
