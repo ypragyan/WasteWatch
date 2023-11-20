@@ -4,18 +4,18 @@ import numpy as np
 from PIL import Image
 
 # Set page title and favicon
-st.set_page_config(page_title="WasteWatch: AI Waste Sorting", page_icon="♻️")
+st.set_page_config(page_title="WasteWatch", page_icon="♻️")
  
 
 # Function to create a sidebar with project information
 def project_sidebar():
-    st.sidebar.title("WasteWatch: AI Waste Sorting")
+    st.sidebar.title("WasteWatch")
     st.sidebar.info(
         "WasteWatch is an AI-powered waste sorting project"
     )
     st.sidebar.subheader("Project Links")
     st.sidebar.markdown("[GitHub Repository](https://github.com/ypragyan/WasteWatch/tree/main)")
-    st.sidebar.markdown("[Documentation](https://docs.google.com/presentation/d/1UNmV66jZEMEsP_Dm142TjZXEKSmYRRb8nxpoEgWEMis/edit#slide=id.g29cec67359b_0_0)")
+    st.sidebar.markdown("[Presentation](https://docs.google.com/presentation/d/1UNmV66jZEMEsP_Dm142TjZXEKSmYRRb8nxpoEgWEMis/edit#slide=id.g29cec67359b_0_0)")
 
 # Function to create the Problem page
 def problem_page():
