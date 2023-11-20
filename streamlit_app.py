@@ -40,7 +40,7 @@ def ai_page():
     # Data Examples
     st.subheader("Results")
     data_example_images = [
-        Image.open("Images/Accuray.png"),
+        Image.open("Images/Accuracy.png"),
         Image.open("Images/Loss.png"),
         Image.open("Images/wastewatch.jpg"),
     ]
