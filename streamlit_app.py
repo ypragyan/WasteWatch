@@ -1,38 +1,63 @@
-# Importing necessary libraries
 import streamlit as st
 import pandas as pd
 import numpy as np
-pip install streamlit pandas numpy Pillow tensorflow
-# Creating a simple Streamlit app
-def main():
-    st.title("Simple Streamlit App")
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-    # Sidebar with user input
-    user_input = st.sidebar.text_input("Enter your name", "John Doe")
-    st.sidebar.write(f"Hello, {user_input}!")
+# Set page title and favicon
+st.set_page_config(page_title="Project Showcase", page_icon="🚀")
 
-    # Main content
-    st.header("Data Exploration")
-
-    # Create a sample DataFrame
+# Function to load data
+def load_data():
+    # Replace this with your own data loading logic
     data = pd.DataFrame({
-        'Numbers': np.random.randn(100),
-        'Categories': np.random.choice(['A', 'B', 'C'], 100)
+        'Date': pd.date_range(start='2023-01-01', periods=100, freq='D'),
+        'Value': np.random.randn(100).cumsum()
     })
+    return data
 
-    # Display the DataFrame
-    st.write("Sample DataFrame:")
-    st.write(data)
+# Function to create a line chart
+def plot_line_chart(data):
+    st.subheader("Project Overview")
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.lineplot(x='Date', y='Value', data=data, ax=ax, label='Project Data', color='blue')
+    plt.title('Project Performance Over Time')
+    plt.xlabel('Date')
+    plt.ylabel('Value')
+    st.pyplot(fig)
 
-    # Plot a histogram of the 'Numbers' column
-    st.bar_chart(data['Numbers'])
+# Function to create a data table
+def display_data_table(data):
+    st.subheader("Project Data Table")
+    st.dataframe(data)
 
-    # Display a map with random data points
-    map_data = pd.DataFrame(
-        np.random.randn(1000, 2) / [50, 50] + [37.7749, -122.4194],
-        columns=['lat', 'lon']
+# Function to create a sidebar with project information
+def project_sidebar():
+    st.sidebar.title("Project Details")
+    st.sidebar.info(
+        "This is a showcase of a project. Provide a brief description of your project here."
     )
-    st.map(map_data)
+    st.sidebar.subheader("Project Links")
+    st.sidebar.markdown("[GitHub Repository](https://github.com/yourusername/yourproject)")
+    st.sidebar.markdown("[Documentation](https://yourprojectdocs.com)")
+    st.sidebar.subheader("Contact Information")
+    st.sidebar.text("For inquiries, please contact:")
+    st.sidebar.text("Your Name")
+    st.sidebar.text("youremail@example.com")
+
+# Main function
+def main():
+    st.title("Project Showcase")
+
+    # Load data
+    data = load_data()
+
+    # Create layout
+    project_sidebar()
+
+    # Display project components
+    plot_line_chart(data)
+    display_data_table(data)
 
 if __name__ == "__main__":
     main()
