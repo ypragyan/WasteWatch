@@ -53,19 +53,19 @@ def ai_page():
     # Data Examples
     st.subheader("Data Examples")
     data_example_images = [
-        Image.open("data_example_1.jpg"),
-        Image.open("data_example_2.jpg"),
-        Image.open("data_example_3.jpg")
+        Image.open("Images/wastewatch.jpg"),
+        Image.open("Images/wastewatch.jpg"),
+        Image.open("Images/wastewatch.jpg"),
     ]
     st.image(data_example_images, caption=["Example 1", "Example 2", "Example 3"], use_column_width=True)
 
     # Heatmaps
     st.subheader("Heatmaps")
     heatmap_images = [
-        Image.open("heatmap_1.jpg"),
-        Image.open("heatmap_2.jpg"),
-        Image.open("heatmap_3.jpg"),
-        Image.open("heatmap_4.jpg")
+    Image.open("Images/wastewatch.jpg"),
+    Image.open("Images/wastewatch.jpg"),
+    Image.open("Images/wastewatch.jpg"),
+    Image.open("Images/wastewatch.jpg"),
     ]
     st.image(heatmap_images, caption=["Heatmap 1", "Heatmap 2", "Heatmap 3", "Heatmap 4"], use_column_width=True)
 
