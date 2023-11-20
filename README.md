@@ -7,8 +7,6 @@ Welcome to the github repository of team WasteWatch, a project created for the N
 - [Introduction](#introduction)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Demo](#demo)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
