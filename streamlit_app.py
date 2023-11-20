@@ -18,15 +18,24 @@ def project_sidebar():
     st.sidebar.markdown("[Presentation](https://docs.google.com/presentation/d/1UNmV66jZEMEsP_Dm142TjZXEKSmYRRb8nxpoEgWEMis/edit#slide=id.g29cec67359b_0_0)")
 
 # Function to create the Problem page
+# Function to create the Problem page
 def problem_page():
     st.title("Waste Sorting Problem")
+    st.text("While the waste sorting industry is an essential part of our environment, we fail to pay adequate attention to the problems it causes in the lives of people that are directly involved in the process such as laborers who manually sort waste. Their lives are often spent in poverty and bio-hazardous conditions because of their occupation.
+")
+    st.text("Manual waste pickers in the industry are no longer equipped to handle the 2 trillion tonnes of waste produced each year globally. "
+            "Waste pickers live on the street or on dump sites. In addition, waste pickers are mobile and their work often varies seasonally.")
+    
+    st.text("Not efficiently segregating waste can cause economic issues, like wasting land resources, and environmental problems, "
+            "such as the release of harmful gases from piled-up waste.")
 
-    st.write(
-        "The improper disposal of waste is a significant environmental concern. "
-        "Waste sorting is crucial to minimize the impact on the environment and enable recycling."
-    )
+    st.text("Waste pickers’ earnings vary widely between regions depending on different factors. Incomes are as low as US $2/day in some areas.")
 
-    # Add more information about the waste sorting problem
+    st.text("The majority of waste pickers have generally low levels of formal education. In many places, the work is done by primarily disadvantaged groups.")
+
+    st.text("Informal waste management sector disproportionately focuses on lower-tier women, while men dominate higher-income roles, "
+            "resulting in a gendered division of labor and exclusion from formalized activities.")
+
 
 # Function to create the AI page
 def ai_page():
