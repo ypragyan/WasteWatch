@@ -32,7 +32,7 @@ st.set_page_config(
 )
  
 # Use st.markdown to apply the custom CSS
-st.markdown(custom_css, unsafe_allow_html=True)
+# st.markdown(custom_css, unsafe_allow_html=True)
 # Front page layout
 st.title("Welcome to Waste Watch!")
 st.write("Empowering Waste Management with AI")
