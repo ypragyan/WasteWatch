@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+!pip install tensorflow
 
 # Creating a simple Streamlit app
 def main():
