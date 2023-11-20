@@ -20,7 +20,7 @@ def ai_page():
     heatmap_images = [
         Image.open("Images/class.png"),
         Image.open("Images/data.png"),
-        Image.open("Images/images.png"),
+        Image.open("Images/images.png")
     ]
     st.write("While the class distribution appears relatively balanced overall, there is a noticeable disproportion in the amount of data allocated to paper and e-waste. This distribution closely mirrors real-world scenarios, where certain waste categories, such as paper, tend to be more prevalent, while others, like e-waste, are relatively less abundant.")
     st.image(heatmap_images, caption=["Class Distribution Comparison ", "Sample Images of the dataset", "Pixel Value Distribution"], use_column_width=True)
@@ -33,8 +33,8 @@ def ai_page():
     st.subheader("Results")
     data_example_images = [
         Image.open("Images/Accuracy.png"),
-        Image.open("Images/Loss.png")
-        Image.open("Images/types.png")
+        Image.open("Images/Loss.png"),
+        Image.open("Images/types.png"),
         Image.open("Images/table.png")
     ]
     st.image(data_example_images, caption=["Training and Validation Accuracy Over Epochs: The model achieves a peak accuracy of 78&. ", "Training and Validation Loss Over Epochs ], use_column_width=True)
