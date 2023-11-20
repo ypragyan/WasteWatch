@@ -47,7 +47,7 @@ def ai_page():
 
     # AI Model Architecture Image
     st.subheader("Model Architecture")
-    model_architecture_image = Image.open("model_architecture.png")
+    model_architecture_image =  Image.open("Images/wastewatch.jpg")
     st.image(model_architecture_image, caption="WasteWatch Model Architecture", use_column_width=True)
 
     # Data Examples
