@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # Set page title and favicon
-st.set_page_config(page_title="WasteWatch: AI Waste Sorting", page_icon="♻️")
+st.set_page_config(page_title="WasteWatch", page_icon="♻️")
 
 # Function to load data
 def load_data():
@@ -26,13 +26,13 @@ def project_sidebar():
     st.sidebar.info(
         "WasteWatch is an AI-powered waste sorting project. It uses computer vision to classify waste types."
     )
-    st.sidebar.subheader("Project Links")
-    st.sidebar.markdown("[GitHub Repository](https://github.com/yourusername/wastewatch)")
-    st.sidebar.markdown("[Documentation](https://wastewatchdocs.com)")
+    st.sidebar.subheader("Project")
+    st.sidebar.markdown("[GitHub Repository](https://github.com/ypragyan/WasteWatch/tree/main)")
+    st.sidebar.markdown("[Presentation](https://docs.google.com/presentation/d/1UNmV66jZEMEsP_Dm142TjZXEKSmYRRb8nxpoEgWEMis/edit#slide=id.g29cec67359b_0_0)")
     st.sidebar.subheader("Contact Information")
     st.sidebar.text("For inquiries, please contact:")
-    st.sidebar.text("Your Name")
-    st.sidebar.text("youremail@example.com")
+    st.sidebar.text("Pragyan Yadav")
+    st.sidebar.text("ypragyan01@gmail.com")
 
 # Main function
 def main():
