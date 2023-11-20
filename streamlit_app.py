@@ -34,14 +34,14 @@ def ai_page():
 
     # AI Model Architecture Image
     st.subheader("Model Architecture")
-    model_architecture_image =  Image.open("Images/Model.jpg")
+    model_architecture_image =  Image.open("Images/Model.png")
     st.image(model_architecture_image, caption="WasteWatch Model Architecture", use_column_width=True)
 
     # Data Examples
     st.subheader("Results")
     data_example_images = [
-        Image.open("Images/Accuray.jpg"),
-        Image.open("Images/Loss.jpg"),
+        Image.open("Images/Accuray.png"),
+        Image.open("Images/Loss.png"),
         Image.open("Images/wastewatch.jpg"),
     ]
     st.image(data_example_images, caption=["Example 1", "Example 2", "Example 3"], use_column_width=True)
@@ -49,9 +49,9 @@ def ai_page():
     # Heatmaps
     st.subheader("Attribution Methods: Visualising AI gained Knowledge")
     heatmap_images = [
-    Image.open("Images/Heatmap.jpg"),
-    Image.open("Images/Layers.jpg"),
-    Image.open("Images/XAI.jpg"),
+    Image.open("Images/Heatmap.png"),
+    Image.open("Images/Layers.png"),
+    Image.open("Images/XAI.png"),
  
     ]
     st.image(heatmap_images, caption=["Heatmap 1", "Heatmap 2", "Heatmap 3"], use_column_width=True)
