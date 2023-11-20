@@ -17,7 +17,7 @@ def load_data():
 
 # Function to create a data table
 def display_data_table(data):
-    st.subheader("Waste Sorting Data Table")
+    st.subheader("Results")
     st.dataframe(data)
 
 # Function to create a sidebar with project information
@@ -36,7 +36,7 @@ def project_sidebar():
 
 # Main function
 def main():
-    st.title("WasteWatch: AI Waste Sorting")
+    st.title("WasteWatch")
 
     # Load data
     data = load_data()
