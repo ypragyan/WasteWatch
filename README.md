@@ -1,5 +1,5 @@
 # WasteWatch AI Project
-![WasteWatchLogo](Images/wastewatch.png)
+![WasteWatchLogo](Images/wastewatch.jpg)
 
 ## Overview
 
