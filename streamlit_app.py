@@ -1,7 +1,23 @@
 import streamlit as st
 from PIL import Image
 import tensorflow
- 
+import logging
+import logging.handlers
+import queue
+import threading
+import time
+import urllib.request
+import os
+from collections import deque
+from pathlib import Path
+from typing import List
+
+import av
+import numpy as np
+import pydub
+import streamlit as st
+from twilio.rest import Client
+
 # Set page title and favicon
 st.set_page_config(page_title="WasteWatch", page_icon="♻️")
 
