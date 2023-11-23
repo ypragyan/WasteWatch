@@ -1,7 +1,11 @@
 import streamlit as st
 from PIL import Image
+import streamlit as st
 import tensorflow as tf
 from tensorflow import keras
+import requests
+import numpy as np
+
 
 st.set_page_config(page_title="WasteWatch", page_icon="♻️")
 
