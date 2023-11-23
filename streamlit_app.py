@@ -22,7 +22,7 @@ def project_sidebar():
     st.sidebar.info("WasteWatch is an AI-powered waste sorting project")
     st.sidebar.subheader("Project Links")
     st.sidebar.markdown("[GitHub Repository](https://github.com/ypragyan/WasteWatch/tree/main)")
-    st.sidebar.markdown("[Presentation](https://docs.google.com/presentation/d/1UNmV66jZEMEsP_Dm142TjZXEKSmYRRb8nxpoEgWEMis/edit#slide=id.g29cec67359b_0_0)")
+    st.sidebar.markdown("[Presentation](https://docs.google.com/presentation/d/1UNmV66jZEMEsP_Dm142TjZXEKSmYRRb8nxpoEgWEMis/present?slide=id.g29d39edb054_3_401)")
 
 # Function to create the AI page
 def ai_page():
