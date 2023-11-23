@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-import tensorflow
+# import tensorflow
 import logging
 import logging.handlers
 import queue
