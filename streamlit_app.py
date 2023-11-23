@@ -1,6 +1,8 @@
 import streamlit as st
 from PIL import Image
- 
+import tensorflow as tf
+from tensorflow import keras
+
 
 # Set page title and favicon
 st.set_page_config(page_title="WasteWatch", page_icon="♻️")
