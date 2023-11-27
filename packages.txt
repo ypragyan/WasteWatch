@@ -1,3 +1,7 @@
 tensorflow
 numpy
-keras
+keras 
+opencv-python
+scikit-image
+requests
+matplotlib
