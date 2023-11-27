@@ -1,7 +1,0 @@
-tensorflow
-numpy
-keras 
-opencv-python
-scikit-image
-requests
-matplotlib
