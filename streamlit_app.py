@@ -55,6 +55,14 @@ def make_gradcam_heatmap(img_array, model, last_conv_layer_name, pred_index=None
 
 st.title("WasteWatch: AI-Powered Waste Sort")
 
+def project_sidebar():
+    st.sidebar.title("WasteWatch")
+    st.sidebar.info("WasteWatch is an AI-powered waste sorting project")
+    st.sidebar.subheader("Project Links")
+    st.sidebar.markdown("[GitHub Repository](https://github.com/ypragyan/WasteWatch/tree/main)")
+    st.sidebar.markdown("[Presentation](https://docs.google.com/presentation/d/1UNmV66jZEMEsP_Dm142TjZXEKSmYRRb8nxpoEgWEMis/present?slide=id.g29d39edb054_3_401)")
+
+
 
 page = st.sidebar.selectbox("Go to Page:", ["Explanation", "Demo"], index=1)
  
