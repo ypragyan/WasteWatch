@@ -63,9 +63,9 @@ if page == "Explanation":
     
     st.subheader("Data")
     data_imgs = [
-        Image.open("images/class.png"),
-        Image.open("images/data.png"),
-        Image.open("images/images.png")
+        Image.open("Images/class.png"),
+        Image.open("Images/data.png"),
+        Image.open("Images/images.png")
     ]
     st.write("The dataset was obtained from Jay Soni, and it was categorized into six classes: e-waste, batteries, glass, metal, organic, and paper, representing the most common types of waste. While the class distribution appears relatively balanced overall, there is a noticeable disproportion in the amount of data allocated to paper and e-waste. This distribution closely mirrors real-world scenarios, where certain waste categories, such as paper, tend to be more prevalent, while others, like e-waste, are relatively less abundant.")
     st.write("In total, the dataset comprises 4,580 training samples and 1,128 testing samples. The images in the dataset exhibit a mean pixel value of 0.59, accompanied by a standard deviation of 0.292. These statistical measures provide insights into the overall brightness and variability of the images within the dataset.")
@@ -74,13 +74,13 @@ if page == "Explanation":
     st.subheader("Model")
     st.write(" The model used in this project is designed in a sequential architecture for the task of image classification. It consists of several types of layers. Initially, Conv2D layers with 128 filters process the input image, followed by batch normalization for model stability. Max-pooling reduces spatial dimensions, and dropout helps prevent overfitting. The architecture repeats with 128 filters. The Global Average Pooling 2D layer averages spatial dimensions, and Dense layers shape the final output. In this model, there are 6 output units, for classifying the input image into 6 types of waste.")
     st.write("The model is implemented using the TensorFlow and Keras frameworks. It utilizes the Adam optimizer with a learning rate of 1e-3 and is compiled with the Categorical Cross Entropy loss function. To enhance training, a ReduceLROnPlateau callback is employed, which dynamically adjusts the learning rate based on the validation loss, allowing for more efficient convergence. The training process involves 50 epochs, and the model's performance metrics, such as accuracy, are monitored. The training history, including information about the loss and accuracy during each epoch, is stored in the 'history' variable for further analysis.")
-    model_architecture_image = Image.open("images/Model.png")
+    model_architecture_image = Image.open("Images/Model.png")
     st.image(model_architecture_image, caption="WasteWatch Model Architecture")
 # Data Examples
     st.subheader("Results")
     data_example_images = [
-        Image.open("images/Accuracy.png"),
-        Image.open("images/Loss.png")
+        Image.open("Images/Accuracy.png"),
+        Image.open("Images/Loss.png")
     ]
     st.image(data_example_images, caption=["Training and Validation Accuracy Over Epochs: The model achieves a peak accuracy of 78&.", "Training and Validation Loss Over Epochs"])
     
@@ -123,9 +123,9 @@ if page == "Explanation":
 
 
     heatmap_images = [
-        Image.open("images/Heatmap.png"),
-        Image.open("images/Layers.png"),
-        Image.open("images/XAI.png"),
+        Image.open("Images/Heatmap.png"),
+        Image.open("Images/Layers.png"),
+        Image.open("Images/XAI.png"),
     ]
     st.image(heatmap_images, caption=[
         "GradCAM Heatmap next to original image", 
